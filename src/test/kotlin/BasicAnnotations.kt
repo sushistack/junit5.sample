@@ -1,7 +1,4 @@
-import org.junit.jupiter.api.BeforeAll
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.DisplayName
-import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.*
 
 class BasicAnnotations {
     companion object {
@@ -10,6 +7,12 @@ class BasicAnnotations {
         @BeforeAll
         fun setupOnce() {
             age = 2
+        }
+
+        @JvmStatic
+        @AfterAll
+        fun teardownAll() {
+            age = 1
         }
     }
 
@@ -25,5 +28,10 @@ class BasicAnnotations {
     fun displayNameTest() {
         println(name)
         println(age)
+    }
+
+    @AfterEach
+    fun teardown() {
+        println(name)
     }
 }
