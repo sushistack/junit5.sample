@@ -24,6 +24,7 @@ class BasicAnnotations {
     }
 
     @Test
+    @Disabled("테스트 비활성화")
     @DisplayName(value = "디스플레이 네임 테스트.")
     fun displayNameTest() {
         println(name)
