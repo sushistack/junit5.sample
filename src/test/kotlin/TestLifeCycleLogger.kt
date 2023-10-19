@@ -6,7 +6,7 @@ import org.junit.jupiter.api.*
 interface TestLifeCycleLogger {
     companion object {
         private val log = KotlinLogging.logger {}
-        private lateinit var sharedVariable: String
+        lateinit var sharedVariable: String
     }
 
     // PER_CLASS 일 때, 인스턴스 메서드로 사용할 수 있음

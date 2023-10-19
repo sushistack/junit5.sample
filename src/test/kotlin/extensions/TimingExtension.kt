@@ -20,13 +20,7 @@ class TimingExtension : BeforeTestExecutionCallback, AfterTestExecutionCallback 
         val startTime = getStore(context).remove(START_TIME, Long::class.javaPrimitiveType)
         val duration = System.currentTimeMillis() - startTime
 
-        log.info {
-            String.format(
-                "Method [%s] took %s ms.",
-                testMethod.getName(),
-                duration
-            )
-        }
+        log.info { String.format("Method [%s] took %s ms.", testMethod.name, duration) }
     }
 
     private fun getStore(context: ExtensionContext): Store {
