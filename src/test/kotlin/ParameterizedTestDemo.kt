@@ -1,6 +1,7 @@
 import com.sushistack.isPalindrome
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.Arguments.arguments
 import org.junit.jupiter.params.provider.EnumSource
 import org.junit.jupiter.params.provider.MethodSource
 import org.junit.jupiter.params.provider.NullAndEmptySource
@@ -43,12 +44,26 @@ class ParameterizedTestDemo {
         assertNotEquals(9, argument)
     }
 
+    @ParameterizedTest
+    @MethodSource("stringIntAndListProvider")
+    fun testWithMultiArgMethodSource(str: String, num: Int, list: List<String>) {
+        assertEquals(5, str.length)
+        assertTrue(num in 1..2)
+        assertEquals(2, list.size)
+    }
+
     companion object {
         @JvmStatic
         fun stringProvider() = listOf("apple", "banana")
 
         @JvmStatic
         fun range() = IntStream.range(0, 20).skip(10)
+
+        @JvmStatic
+        fun stringIntAndListProvider() = listOf(
+            arguments("apple", 1, listOf("a", "b")),
+            arguments("lemon", 2, listOf("x", "y"))
+        )
     }
 
 }
