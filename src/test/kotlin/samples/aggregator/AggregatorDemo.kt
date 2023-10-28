@@ -24,6 +24,16 @@ class AggregatorDemo {
         log.info { "person = $person" }
     }
 
+    @ParameterizedTest
+    @CsvSource(
+        "Jane, Doe, F, 1990-05-20",
+        "John, Doe, M, 1990-10-22"
+    )
+    fun testWithCustomAggregatorAnnotation(@CsvToPerson person: Person?) {
+        // perform assertions against person
+        log.info { "person = $person" }
+    }
+
     class PersonAggregator : ArgumentsAggregator {
         override fun aggregateArguments(arguments: ArgumentsAccessor, context: ParameterContext): Person {
             return Person(
