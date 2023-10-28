@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test
 class TestInterfaceDemo:
     TestInterfaceDynamicTestsDemo, // 같이 실행 됨
     TestLifeCycleLogger, // samples.interfaces.TestLifeCycleLogger -- About to execute [isEqualValue()]
-    TimeExecutionLogger // extensions.TimingExtension -- Method [isEqualValue] took 2 ms.
+    TimeExecutionLogger // samples.extension.TimingExtension -- Method [isEqualValue] took 2 ms.
 {
     private val log = KotlinLogging.logger {}
     @Test

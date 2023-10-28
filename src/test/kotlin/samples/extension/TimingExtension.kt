@@ -1,4 +1,4 @@
-package extensions
+package samples.extension
 
 import io.github.oshai.kotlinlogging.KotlinLogging
 import org.junit.jupiter.api.extension.AfterTestExecutionCallback

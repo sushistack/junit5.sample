@@ -1,6 +1,5 @@
 package samples.extension
 
-import extensions.TimingExtension
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.RegisterExtension
 import java.lang.Thread.sleep
@@ -13,12 +12,12 @@ class InstanceRegisterExtensionDemo {
     @Test
     fun sleep20ms() {
         sleep(20)
-        //[main] INFO extensions.TimingExtension -- Method [sleep20ms] took 30 ms.
+        //[main] INFO samples.extension.TimingExtension -- Method [sleep20ms] took 30 ms.
     }
 
     @Test
     fun sleep50ms() {
         sleep(50)
-        //[main] INFO extensions.TimingExtension -- Method [sleep50ms] took 53 ms.
+        //[main] INFO samples.extension.TimingExtension -- Method [sleep50ms] took 53 ms.
     }
 }

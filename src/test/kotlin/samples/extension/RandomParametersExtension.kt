@@ -1,4 +1,4 @@
-package extensions
+package samples.extension
 
 import org.junit.jupiter.api.extension.ExtensionContext
 import org.junit.jupiter.api.extension.ParameterContext
