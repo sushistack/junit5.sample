@@ -1,3 +1,5 @@
+package samples.extension
+
 import extensions.RandomParametersExtension
 import extensions.RandomParametersExtension.*
 import org.junit.jupiter.api.Assertions.assertEquals

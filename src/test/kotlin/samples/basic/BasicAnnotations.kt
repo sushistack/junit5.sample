@@ -1,3 +1,5 @@
+package samples.basic
+
 import org.junit.jupiter.api.*
 
 class BasicAnnotations {

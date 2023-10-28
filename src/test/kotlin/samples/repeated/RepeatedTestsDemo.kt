@@ -1,3 +1,5 @@
+package samples.repeated
+
 import io.github.oshai.kotlinlogging.KotlinLogging
 import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.assertEquals

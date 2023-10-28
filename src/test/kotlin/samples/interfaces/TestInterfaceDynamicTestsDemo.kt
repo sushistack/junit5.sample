@@ -1,4 +1,4 @@
-
+package samples.interfaces
 import com.sushistack.isPalindrome
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.DynamicTest
