@@ -8,6 +8,13 @@ import org.junit.jupiter.api.DynamicTest.dynamicTest
 import org.junit.jupiter.api.TestFactory
 import java.io.File
 
+/**
+ * Dynamic Test 는 언제 사용 할까?
+ * 사실 복잡해 보이기만 하고 Parameterized Test 가 훨씬 가독성 있고 직관적
+ * Dynamic Test 는 테스트 대상이 동적으로 변경 되는 경우에 사용 되면 좋음
+ * 예를 들면 playwright 를 이용 하여 외부 웹 사이트에 대한 테스트가 필요한 경우,
+ * S3 와 같은 외부 리소스에 대한 테스트가 필요한 경우
+ */
 class DynamicTestsDemo {
     // 동적으로 테스트를 만듬
     @TestFactory
