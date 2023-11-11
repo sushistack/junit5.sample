@@ -1,0 +1,6 @@
+[
+  { "input": "JUnit", "expectedLength": 5 },
+  { "input": "Kotlin", "expectedLength": 6 },
+  { "input": "", "expectedLength": 0 },
+  { "input": "DynamicTest", "expectedLength": 11 }
+]
