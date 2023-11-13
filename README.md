@@ -50,11 +50,22 @@ class GoodbyePlugin : Plugin {
 
 #### 언제 쓸까?
 
-사실 복잡해 보이기만 하고 Parameterized Test 가 훨씬 가독성 있고 직관적, Dynamic Test 는 테스트 대상이 동적으로 변경 되는 경우에 사용 되면 좋음 
+사실 복잡해 보이기만 하고 Parameterized Test 가 훨씬 가독성 있고 직관적, Dynamic Test 는 테스트 대상이 동적으로 변경 되는 경우에 사용 되면 좋음
 예를 들면, playwright 를 이용 하여 외부 웹 사이트에 대한 테스트가 필요한 경우, S3 와 같은 외부 리소스에 대한 테스트가 필요한 경우가 있다.
 
 
 ## 테스트 라이프 사이클
 
+![image](https://github.com/user-attachments/assets/80c88918-8206-419a-a14b-b18cfe86154b)
+출처: https://www.geeksforgeeks.org/junit-5-test-lifecycle/
+
+
 ## 테스트 라이프 사이클 콜백
+
+![image](https://github.com/user-attachments/assets/0d2c342e-ced7-45a7-b0a0-b552be7b206e)
+출처: https://junit.org/junit5/docs/current/user-guide/#extensions-lifecycle-callbacks
+
+### 콜백은 어디에 쓸까?
+
+보통 다양한 Extension 들을 만들 때 사용 한다.
 
