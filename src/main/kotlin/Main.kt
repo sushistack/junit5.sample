@@ -37,3 +37,25 @@ class MyAutoCloseableResource() : AutoCloseable {
 
     fun doSomething() = "Doing something with the resource!"
 }
+
+class BankAccount(private var balance: Double) {
+
+    init {
+        require(balance >= 0) { "초기 잔액은 음수가 될 수 없습니다." }
+    }
+
+    fun deposit(amount: Double) {
+        require(amount > 0) { "입금액은 양수여야 합니다." }
+        balance += amount
+    }
+
+    fun withdraw(amount: Double) {
+        require(amount > 0) { "출금액은 양수여야 합니다." }
+        if (amount > balance) {
+            throw IllegalStateException("잔액이 부족합니다.")
+        }
+        balance -= amount
+    }
+
+    fun getBalance(): Double = balance
+}
